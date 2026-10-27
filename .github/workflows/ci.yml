@@ -1,0 +1,30 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: ['22.x', '24.x']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+          cache: npm
+      - run: npm ci
+      # Fail-closed dependency license policy; THIRD_PARTY_NOTICES.md must match the lockfile closure.
+      - run: npm run licenses:check
+      - run: npm run typecheck
+      - run: npm test
+      - run: npm run build
+      # Smoke tests drive dist/cli.js over stdio and HTTP with an empty store (no upstream calls).
+      - run: npx vitest run --config vitest.smoke.config.ts

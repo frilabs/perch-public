@@ -1,0 +1,254 @@
+{
+  "project": {
+    "license": "MIT",
+    "copyright": "Copyright (c) 2026 Fritz Kuermayr"
+  },
+  "production": {
+    "allowed": [
+      "MIT",
+      "MIT-0",
+      "ISC",
+      "BSD-2-Clause",
+      "BSD-3-Clause"
+    ]
+  },
+  "development": {
+    "allowed": [
+      "MIT",
+      "MIT-0",
+      "ISC",
+      "BSD-2-Clause",
+      "BSD-3-Clause",
+      "Apache-2.0",
+      "MPL-2.0"
+    ]
+  },
+  "elections": [
+    {
+      "package": "@zone-eu/mailsplit@5.4.20",
+      "expression": "(MIT OR EUPL-1.1+)",
+      "elected": "MIT",
+      "licenseFiles": [
+        "LICENSE.MIT"
+      ],
+      "note": "Dual licensed (package.json; README: \"Dual licensed under MIT or EUPLv1.1+\"). Perch elects MIT and reproduces LICENSE.MIT. The EUPL alternative (bundled as LICENSE.EUPL-1.2) is not elected and not reproduced."
+    }
+  ],
+  "textOverrides": [
+    {
+      "package": "encoding-japanese@2.4.0",
+      "file": "LICENSE",
+      "detected": "MIT+extra",
+      "note": "The complete SPDX MIT text (Copyright (c) 2012-present polygonplanet) followed by a \"Third-Party Licenses and Credits\" section crediting the DefinitelyTyped typings (MIT, Copyright (c) Microsoft Corporation); manual review found no additional restriction. Treated as MIT and reproduced verbatim, including the credits."
+    },
+    {
+      "package": "fast-uri@3.1.9",
+      "file": "LICENSE",
+      "detected": "UNKNOWN",
+      "note": "BSD-3-Clause structure whose third clause is worded \"The names of any contributors may not be used to endorse or promote products derived from this software without specific prior written permission\" instead of the SPDX \"Neither the name of ...\" wording, followed by a pointer to the uri-js contributor list; manual review found no additional restriction. Treated as the declared BSD-3-Clause and reproduced verbatim."
+    },
+    {
+      "package": "imapflow@2.2.5",
+      "file": "LICENSE.txt",
+      "detected": "MIT-truncated",
+      "note": "package.json and the npm registry declare MIT, but LICENSE.txt (identical in the upstream repository at the published gitHead ca0fb63) ends the grant with \"subject to the following conditions:\" and states none, so it is neither the SPDX MIT nor the SPDX MIT-0 text. Treated conservatively as MIT: copyright and permission notice retained here."
+    },
+    {
+      "package": "nodemailer@10.2.1",
+      "file": "LICENSE",
+      "detected": "MIT-truncated",
+      "note": "package.json and the npm registry declare MIT-0 (CHANGELOG: \"was defined as MIT, actual value MIT-0\"), but LICENSE ends the grant with \"subject to the following conditions:\" and states none. Not treated as attribution-free: copyright and permission notice retained here, and the vendored punycode.js notice (full MIT) is reproduced below."
+    }
+  ],
+  "embedded": [
+    {
+      "package": "encoding-japanese@2.4.0",
+      "file": "encoding.js",
+      "lines": [
+        6124,
+        6131
+      ],
+      "sha256": "367585dab5225ce538cb2b5f799fb54a4c5196df2cbb7320d2e0a6264f307f93",
+      "action": "reproduce",
+      "nonSpdxGrant": "This library is free. You can redistribute it and/or modify it.",
+      "note": "Browserify build of src/util.js; the same Masanao Izumo Base64 header, byte-identical. encoding.min.js contains the minified Base64 code (base64encode/base64decode) but uglify dropped this comment, so this notice also stands for that build."
+    },
+    {
+      "package": "encoding-japanese@2.4.0",
+      "file": "index.d.ts",
+      "lines": [
+        1,
+        4
+      ],
+      "sha256": "ef5fadfe6e62b79fcf6dbeda34ca985b4e8ec78b89728abdec67e7a945e2a8dd",
+      "action": "reproduce",
+      "note": "TypeScript declarations derived from DefinitelyTyped (@types/encoding-japanese), MIT."
+    },
+    {
+      "package": "encoding-japanese@2.4.0",
+      "file": "src/banner.js",
+      "lines": [
+        1,
+        6
+      ],
+      "sha256": "1686131d9549afeb8b4278f8c5cda0ff7c0ba885b60648f9b02e6d3ad903bd59",
+      "action": "covered",
+      "note": "Build-time banner template with placeholders for the package's own name, author and license; no third-party text."
+    },
+    {
+      "package": "encoding-japanese@2.4.0",
+      "file": "src/util.js",
+      "lines": [
+        229,
+        236
+      ],
+      "sha256": "367585dab5225ce538cb2b5f799fb54a4c5196df2cbb7320d2e0a6264f307f93",
+      "action": "reproduce",
+      "nonSpdxGrant": "This library is free. You can redistribute it and/or modify it.",
+      "note": "Base64 code vendored from Masanao Izumo (1999) with its own short grant, which has no SPDX identifier and is not covered by the package LICENSE (polygonplanet MIT) or its \"Third-Party Licenses and Credits\" section. Reproduced because it names a copyright holder; the grant states no attribution condition."
+    },
+    {
+      "package": "fast-uri@3.1.9",
+      "file": "test/uri-js.test.js",
+      "lines": [
+        14,
+        40
+      ],
+      "sha256": "20edcbf1e1685a0517b6ef0b9d1afd6540586335668df3505cb3d4894584423d",
+      "action": "reproduce",
+      "note": "Test file ported from uri-js carries Gary Court's own 2-clause BSD text (with an extra views/conclusions paragraph); reproduced because its wording differs from the package LICENSE."
+    },
+    {
+      "package": "hono@4.13.13",
+      "file": "dist/cjs/helper/css/common.js",
+      "lines": [
+        21,
+        25
+      ],
+      "sha256": "3bbebeac76609747de5c24d5a02354c51b56417aae7ff9aa5aab7c73a51ee7e3",
+      "action": "reproduce",
+      "note": "Hash function based on goober (MIT, Cristian Bote)."
+    },
+    {
+      "package": "hono@4.13.13",
+      "file": "dist/helper/css/common.js",
+      "lines": [
+        20,
+        24
+      ],
+      "sha256": "3bbebeac76609747de5c24d5a02354c51b56417aae7ff9aa5aab7c73a51ee7e3",
+      "action": "reproduce",
+      "note": "ESM build of the same goober-derived hash function."
+    },
+    {
+      "package": "hono@4.13.13",
+      "file": "dist/types/jsx/intrinsic-elements.d.ts",
+      "lines": [
+        4,
+        9
+      ],
+      "sha256": "06814805d8f24b746a9055c86c1623fe992a20a8f4eb809dff6cc5f8e311118c",
+      "action": "reproduce",
+      "note": "JSX type declarations based on React (MIT, Meta Platforms, Inc. and affiliates)."
+    },
+    {
+      "package": "hono@4.13.13",
+      "file": "dist/types/utils/types.d.ts",
+      "lines": [
+        43,
+        46
+      ],
+      "sha256": "cdfadc6bbb34825e70f42258efbddfcebeffb9073f612038922c05c21d05f96b",
+      "action": "reproduce",
+      "note": "The Simplify type is attributed to sindresorhus/type-fest (\"@copyright from sindresorhus/type-fest\"); no license text is embedded. type-fest is not in Perch's dependency tree, and the license of the type-fest revision hono copied from was not verified here."
+    },
+    {
+      "package": "iconv-lite@0.7.3",
+      "file": "lib/index.d.ts",
+      "lines": [
+        1,
+        6
+      ],
+      "sha256": "aafb03df8945b83ded57a71dd6ea4a88c7264c981c2077d72fd6a63cf9f3b576",
+      "action": "reproduce",
+      "note": "Type declarations with a Microsoft Corporation copyright, MIT."
+    },
+    {
+      "package": "json-schema-typed@8.0.2",
+      "file": "draft_07.js",
+      "lines": [
+        3,
+        35
+      ],
+      "sha256": "7fb1702d13562633d3462efd2eb78e89b740e9fef131b12dcd38cecd53ecd3f4",
+      "action": "covered",
+      "note": "Header repeats the BSD-2-Clause text and copyright holders that LICENSE.md (reproduced above) already contains verbatim."
+    },
+    {
+      "package": "json-schema-typed@8.0.2",
+      "file": "draft_2019_09.js",
+      "lines": [
+        3,
+        35
+      ],
+      "sha256": "2656c6e86cb5e7faf7e7b956b12d75b5db3835fa22f8567fc0ae47b3ad0060e6",
+      "action": "covered",
+      "note": "Header repeats the BSD-2-Clause text and copyright holders that LICENSE.md (reproduced above) already contains verbatim."
+    },
+    {
+      "package": "json-schema-typed@8.0.2",
+      "file": "draft_2020_12.js",
+      "lines": [
+        3,
+        35
+      ],
+      "sha256": "3d147446143e5eb790197503097f1fc61a2924691feff99fd892adc41247c360",
+      "action": "covered",
+      "note": "Header repeats the BSD-2-Clause text and copyright holders that LICENSE.md (reproduced above) already contains verbatim."
+    },
+    {
+      "package": "negotiator@1.1.0",
+      "file": "lib/accept.js",
+      "lines": [
+        1,
+        5
+      ],
+      "sha256": "1385fd81aae5e077f44d85384045047c70840be7ab5d314cceacc5f4909ff556",
+      "action": "reproduce",
+      "note": "Header names Blake Embrey (2026) under \"MIT Licensed\"; the package LICENSE names only Federico Romero, Isaac Z. Schlueter and Douglas Christopher Wilson, so this holder is reproduced here."
+    },
+    {
+      "package": "nodemailer@10.2.1",
+      "file": "dist/cjs/punycode/index.js",
+      "lines": [
+        2,
+        27
+      ],
+      "sha256": "ca21accc8acab42d885aa18128db5198998894b3735240ef729dd5fc6771ddb2",
+      "action": "reproduce",
+      "note": "Vendored punycode.js (Mathias Bynens) under the full MIT license, which requires keeping this notice even though nodemailer itself declares MIT-0."
+    },
+    {
+      "package": "nodemailer@10.2.1",
+      "file": "dist/esm/punycode/index.js",
+      "lines": [
+        1,
+        26
+      ],
+      "sha256": "ca21accc8acab42d885aa18128db5198998894b3735240ef729dd5fc6771ddb2",
+      "action": "reproduce",
+      "note": "ESM build of the same vendored punycode.js (MIT)."
+    },
+    {
+      "package": "split2@4.2.0",
+      "file": "index.js",
+      "lines": [
+        1,
+        15
+      ],
+      "sha256": "a39b24081f1b5fac81c16de76514df3e891639de9fb761048ebccf6d4a00039e",
+      "action": "reproduce",
+      "note": "The package's own ISC text repeated in code; identical to LICENSE except the year range (2014-2021 here, 2014-2018 in LICENSE), so it is reproduced rather than marked covered."
+    }
+  ]
+}
